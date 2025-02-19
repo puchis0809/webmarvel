@@ -1,0 +1,165 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #222);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    font-size: 3rem;
+    color: #f00;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 20px;
+    color: #aaa;
+}
+
+/* Main Sections */
+main section {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(152, 151, 155, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+main section h2 {
+    color: #f00;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+main section p {
+    color: #ddd;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer p {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #aaa;
+    text-align: center;
+}
+
+.back-button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #d00000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+}
+
+.back-button:hover {
+    background-color: #a00000;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .back-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Pantalla de carga */
+.loader-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeOut 3s ease-out forwards;
+}
+
+.loader-logo {
+    width: 200px;
+    animation: zoomIn 1.5s ease-in-out infinite alternate;
+}
+
+/* Contenido de la página (oculto al inicio) */
+.content {
+    display: none;
+    text-align: center;
+    padding: 50px;
+    color: rgb(252, 7, 7);
+    background: #f00505;
+    height: 100vh;
+}
+
+/* Animaciones */
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+}
+
+/* Mostrar el contenido después de la animación */
+@media (prefers-reduced-motion: no-preference) {
+    .content {
+        animation: showContent 0.5s forwards;
+    }
+}
+
+@keyframes showContent {
+    0% { display: none; opacity: 0; }
+    100% { display: block; opacity: 1; }
+}
